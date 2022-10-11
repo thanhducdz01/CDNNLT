@@ -47,3 +47,12 @@ print "Danh sách sinh viên sau khi sắp xếp:\n"
 for x in a.sort_by{|stu|[stu.average]} do
     puts "#{x.show}"
 end
+
+
+
+<%= form_tag(books_path) do %>
+
+    <%= text_field_tag :term %>
+
+    <%= submit_tag 'Search' %>
+<% end %>
