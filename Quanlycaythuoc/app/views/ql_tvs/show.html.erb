@@ -1,0 +1,90 @@
+<div id="<%= dom_id @ql_tv %>">
+ <section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+          <div class="card-body p-4 p-md-5">
+          <p style="color: green"><%= notice %></p>
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Thông tin chi tiết cây thuốc: <label style="color:red"><%= @ql_tv.sv_name %></label> </h3>
+              <div class="row">
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    <input type="text" id="firstName" class="form-control form-control-lg" disabled value="<%= @ql_tv.sv_name %>">
+                    <label class="form-label" for="firstName">Tên cây</label>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    <input type="text" id="lastName" class="form-control form-control-lg" disabled value="<%= @ql_tv.sv_duoctinh %>" />
+                    <label class="form-label" for="lastName">Dược tính</label>
+                  </div>
+
+                </div>
+              </div>
+
+               <div class="row">
+                <div class="col-md-6 mb-4 pb-2">
+
+                  <div class="form-outline datepicker w-100">
+                    <input type="text" class="form-control form-control-lg" id="birthdayDate" disabled value="<%= @ql_tv.sv_dob.strftime('%d-%m-%Y') %>" />
+                    <label for="birthdayDate" class="form-label">Ngày nhập</label>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4 pb-2">
+
+                  <div class="form-outline">
+                    <input type="tel" id="phoneNumber" class="form-control form-control-lg" disabled value="<%= @ql_tv.sv_place %>" />
+                    <label class="form-label" for="phoneNumber">Màu lá</label>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-4 pb-2">
+
+                  <div class="form-outline">
+                    <input type="text" id="emailAddress" class="form-control form-control-lg" disabled value="<%= @ql_tv.sv_addr %>" />
+                    <label class="form-label" for="emailAddress">Nơi trồng</label>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4 pb-2">
+
+                  <div class="form-outline">
+                    <input type="tel" id="phoneNumber" class="form-control form-control-lg" disabled value="<%= @ql_tv.sv_class %>" />
+                    <label class="form-label" for="phoneNumber">Đặc điểm</label>
+                  </div>
+
+                </div>
+              </div>
+              <div class="mt-4 pt-2">
+              
+                    <%= button_to "Xóa cây này",@ql_tv,class:"btn btn-danger",style:"float:left;display:inline-block",method: :delete %>
+    
+                    <%= link_to "Cập nhật thông tin", edit_ql_tv_path(@ql_tv), class:"btn btn-primary",style:"display:inline-block;margin-left:50px" %>
+  
+                    <%= link_to "Quay trờ lại quản lý cây thuốc", ql_tvs_path,class:"btn btn-secondary",style:"display:inline-block;float:right" %>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div>
+  <br>
+  <br>
+
+
+
+</div>
+
+</div>
+
+

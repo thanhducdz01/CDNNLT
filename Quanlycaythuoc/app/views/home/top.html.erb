@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-offset-3 col-lg-6">
+      <div class="text-left">
+        <h1>Trang chủ</h1>
+        <% if logged_in? %>
+          <p style="color: green"><%= notice %></p>
+          <h2>Xin Chào, <%= current_user.sv_name %></h2>
+           <%= link_to "Đăng xuất", logout_path, method: :delete %> 
+           <% else  %>
+            <%= link_to "Mời bạn login", login_path%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

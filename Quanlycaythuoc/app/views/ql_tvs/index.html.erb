@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="title-school" style="width: 410px;">
+    <p class="lead"
+        style="text-align: center ; font-weight: bold; font-family: 'Times New Roman', Times, serif; color: rgb(50, 205, 68);">
+        ĐẠI HỌC ĐÀ NÃNG</p>
+    <p class="lead"
+        style="margin-top: -20px;text-align: center ; font-weight: bold; font-family: 'Times New Roman', Times, serif; color: rgb(50, 205, 68);">
+        TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT
+    </p>
+    </div>
+    <p
+        style="text-align: center; font-weight: bold; font-family: 'Times New Roman', Times, serif; font-size: 30px; color: red;">
+        <%= image_tag "open-book.png" %> QUẢN LÝ CÂY THUỐC
+    </p>
+</div>
+<table class="table table-striped" style="width: 110%">
+  <thead>
+    <tr>
+      <th scope="col-md-auto">STT</th>
+      <th scope="col-md-auto">Mã Cây</th>
+      <th scope="col-md-auto">Tên Cây</th>
+      <th scope="col-md-auto">Đặc điểm</th>
+      <th scope="col-md-auto">Nơi trồng</th>
+      <th scope="col-md-auto">Ngày nhập</th>
+      <th scope="col-md-auto">Dược tính</th>
+      <th scope="col-md-auto">Lưu ý</th>
+      <th scope="col-md-auto">Màu lá</th>
+      <th scope="col-md-auto"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <div id="ql_tvs">
+      <% i=0 %>
+      <% @ql_tvs.each do |ql_tv| i=i+1 %> 
+      <tr>
+      <td><%= i %></td>
+      <%= render ql_tv %>
+      </tr>
+      <!-- <p><%= link_to "Show this ql tv", ql_tv %></p> -->
+      <% end %>
+    </div>
+  </tbody>
+</table>
+
+<%= link_to "Nhập cây mới" , new_ql_tv_path, class:"btn btn-primary" %>

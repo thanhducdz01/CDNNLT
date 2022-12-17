@@ -1,0 +1,6 @@
+      invoke  active_record
+      create    db/migrate/20221214130815_create_scaffolds.rb
+      create    app/models/scaffold.rb
+      invoke    test_unit
+      create      test/models/scaffold_test.rb
+      create      test/fixtures/scaffolds.yml

@@ -1,0 +1,64 @@
+<%= form_with(model: ql_tv) do |form| %>
+  <% if ql_tv.errors.any? %>
+    <div style="color: red">
+      <h4><%= pluralize(ql_tv.errors.count, "error") %></h4>
+      <ul>
+        <% ql_tv.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <label for="exampleInputEmail1">Mã cây</label>
+    <%# <%= form.label :sv_id, style: "display: block" %>
+    <%= form.text_field :sv_id, class:"form-control", placeholder: "Nhập mã sinh viên", style:"width:290px",required:'required' %>
+  </div>
+
+  <div>
+    <label for="exampleInputEmail1">Tên Cây</label>
+    <%# <%= form.label :sv_id, style: "display: block" %>
+    <%= form.text_field :sv_name, class:"form-control",placeholder: "Nhập họ và tên", style:"width:290px",required:'required' %>
+  </div>
+
+  <div>
+    <label for="exampleInputEmail1">Đặc điểm</label>
+    <%# <%= form.label :sv_id, style: "display: block" %>
+    <%= form.text_field :sv_class, class:"form-control",placeholder: "Nhập lớp sinh hoạt", style:"width:290px",required:'required' %>
+  </div>
+
+  <div>
+    <label for="exampleInputEmail1">Nơi trồng</label>
+    <%# <%= form.label :sv_id, style: "display: block" %>
+    <%= form.text_field :sv_addr, class:"form-control",placeholder: "Nhập địa chỉ", style:"width:290px",required:'required' %>
+  </div>
+  <div>
+    <label for="exampleInputEmail1">Ngày nhập</label>
+    <%# <%= form.label :sv_dob, style: "display: block" %>
+    <%= form.date_field :sv_dob,class:"form-control",placeholder:"Chọn ngày nhập hàng",style:"width:290px",required:'required' %>
+  </div>
+  <div>
+    <label for="exampleInputEmail1">Dược tính</label>
+    <%# <%= form.label :sv_dob, style: "display: block" %>
+    <%= form.text_field :sv_duoctinh,class:"form-control",placeholder:"Điền dược tính",style:"width:290px",required:'required' %>
+  </div>
+  <div>
+    <label for="exampleInputEmail1">Lưu ý</label>
+    <%# <%= form.label :sv_dob, style: "display: block" %>
+    <%= form.text_field :sv_note,class:"form-control",placeholder:"Điền lưu ý sử dụng",style:"width:290px",required:'required' %>
+  </div>
+  <div>
+    <label for="exampleInputEmail1">Màu lá</label>
+    <%# <%= form.label :sv_dob, style: "display: block" %>
+    <%= form.text_field :sv_place,class:"form-control",placeholder:"Điền màu lá",style:"width:290px",required:'required' %>
+  </div>
+  <div>
+    <br>
+      <%= if request.url.include? "edit" 
+            form.submit "Cập nhật", class:"btn btn-primary"
+          else
+            form.submit "Tạo mới", class:"btn btn-primary"
+          end %>
+  </div>
+<% end %>

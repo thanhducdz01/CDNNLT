@@ -1,0 +1,35 @@
+<div id="<%= dom_id ql_tv %>">
+  <td>
+    <%= ql_tv.sv_id %>
+  </td>
+  
+  <td>
+    <%= ql_tv.sv_name %>
+  </td>
+
+  <td>
+    <%= ql_tv.sv_class %>
+  </td>
+
+  <td>
+    <%= ql_tv.sv_addr %>
+  </td>
+
+  <td>
+    <%= ql_tv.sv_dob.strftime('%d-%m-%Y')  %>
+    </td>
+  <td>
+    <%= ql_tv.sv_duoctinh  %>
+    </td>
+  <td>
+    <%= ql_tv.sv_note  %>
+    </td>
+
+   <td>
+    <%= ql_tv.sv_place  %>
+    </td> 
+  <%# <td>
+    <%= ql_tv.password_digest %>
+  <%# </td>  %>
+  <td><%= link_to "Xem chi tiết", ql_tv %></td>
+</div>

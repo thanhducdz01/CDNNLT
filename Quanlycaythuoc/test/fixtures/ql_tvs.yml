@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sv_id: MyString
+  sv_name: MyString
+  sv_class: MyString
+  sv_addr: MyString
+  sv_dob: 2022-12-14
+  sv_password: MyString
+
+two:
+  sv_id: MyString
+  sv_name: MyString
+  sv_class: MyString
+  sv_addr: MyString
+  sv_dob: 2022-12-14
+  sv_password: MyString
